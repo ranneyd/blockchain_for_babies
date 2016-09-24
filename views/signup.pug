@@ -10,13 +10,21 @@ block content
                     input(id="username" type="text")
                     label(for="username") Username
                 div.input-field.col.s12
-                    i.material-icons.prefix vpn_key
-                    input(id="username" type="text")
+                    i.material-icons.prefix lock
+                    input(id="password" type="password")
                     label(for="password") Password
                 div.input-field.col.s12
-                    i.material-icons.prefix perm_identity
-                    input(id="fullname" type="text")
-                    label(for="fullname") Full name
+                    i.material-icons.prefix lock_outline
+                    input(id="verify_password" type="password")
+                    label(for="verify_password") Verify password
+                div.input-field.col.s12
+                    i.material-icons.prefix person
+                    input(id="fisrtname" type="text")
+                    label(for="firstname") First name
+                div.input-field.col.s12
+                    i.material-icons.prefix person_outline
+                    input(id="lastname" type="text")
+                    label(for="lastname") Last name
                 div.input-field.col.s12
                     i.material-icons.prefix cake
                     input(id="birthdate" type="text")
@@ -29,3 +37,5 @@ block content
                     i.material-icons.prefix phone
                     input(id="phone" type="text")
                     label(for="phone") Phone number
+                div.input-field.col.s12
+                    input.waves-effect.waves-light.btn(type="submit" value="Sign up")
