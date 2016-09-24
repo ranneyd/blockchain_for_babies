@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Blockchain for Babies' });
 });
 
+/* GET login page. */
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+
 module.exports = router;

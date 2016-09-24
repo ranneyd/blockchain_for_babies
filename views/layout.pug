@@ -8,26 +8,36 @@ html
         link(rel='stylesheet', href='/stylesheets/materialize.min.css')
         link(rel='stylesheet', href='/stylesheets/main.css')
     body
-        nav.light-blue.lighten-1(role="navigation")
-            div.nav-wrapper.container
-                a.brand-logo#logo-container(href="/")
-                    img.logo(src="images/logo.jpg")
-                    | Blockchain for Babies
+        header
+            nav.light-blue.lighten-1(role="navigation")
+                div.nav-wrapper.container
+                    a.brand-logo#logo-container(href="/")
+                        img.logo(src="images/logo.jpg")
+                        | BlockBabies
 
-                mixin links
-                    li 
-                        a(href="#") Login
-                    li 
-                        a(href="#") Create a Baby
-                ul.right.hide-on-med-and-down
-                    +links
-                ul.side-nav#nav-mobile
-                    +links
-                a.button-collapse(data-activates="nav-mobile" href="#")
-                    i.material-icons menu
-        div.section.no-pad-bot
+                    mixin links
+                        li 
+                            a(href="/login") Login
+                    ul.right.hide-on-med-and-down
+                        +links
+                    ul.side-nav#nav-mobile
+                        +links
+                    a.button-collapse(data-activates="nav-mobile" href="#")
+                        i.material-icons menu
+        main
+            div.section.no-pad-bot
+                div.container
+                    block content
+        footer.page-footer.orange
             div.container
-                block content
+                div.row
+                    div.col.s12
+                        h5.white-text Footer stuff
+                        p.grey-text.text-lighten-4 More footer stuff
+            div.footer-copyright
+                div.container
+                    | © Blockchain for Babies
+
         script(type="text/javascript" src="/javascripts/jquery.min.js")
         script(type="text/javascript" src="/javascripts/materialize.min.js")
         script(type="text/javascript" src="/javascripts/main.js")
