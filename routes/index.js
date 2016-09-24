@@ -26,4 +26,14 @@ router.post('/signup', function(req, res, next) {
   res.render('signup');
 });
 
+/* GET create parent page. */
+router.get('/createparent', function(req, res, next) {
+  res.render('createparent');
+});
+
+/* GET create parent page. */
+router.post('/createparent', function(req, res, next) {
+  res.render('createparent');
+});
+
 module.exports = router;
