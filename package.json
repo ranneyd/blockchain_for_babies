@@ -13,6 +13,8 @@
     "pug": "latest",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "node-sass": "latest"
+    "node-sass": "latest",
+    "passport": "latest",
+    "mongoose": "~4.6.1"
   }
 }
