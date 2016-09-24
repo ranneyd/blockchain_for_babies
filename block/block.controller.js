@@ -1,9 +1,10 @@
 var model = require('./block.model.js');
 
-exports.createBaby = function() {
+exports.createBaby = function(username, contactInfo) {
   // Creates a public and private key
   // Returns the created Baby,
   // but the Baby does not have a username or password
+  // contactInfo is really just an address, I suppose.
 };
 
 exports.createBabyParent = function(username, password, contactInfo) {
@@ -13,13 +14,13 @@ exports.createBabyParent = function(username, password, contactInfo) {
   // Adds the contactInfo to the Baby that is returned, also
 }
 
-exports.addPermission = function(from, to) {
+exports.addPermission = function(holder, receiver) {
   // from is a full Baby structure, which contains private key
   // to is a public identifier of the recipient of permissions
   // returns, what, a transaction ID?
 };
 
-exports.revokePermission = function() {
+exports.revokePermission = function(holder, receiver) {
   // ??? Is the owner of permission always the revoker?
   // or can a government admin revoke permission?
 }
@@ -40,10 +41,10 @@ exports.timePermission = function(time, holder, receiver, type) {
   // returns a transactionid?
 }
 
-exports.accessCheck = function(holder) {
-  // type?
-  // receiver?
-  // or does this just return the array of objects {person: x, type: t}
-  // who has this person's permissions?
-  // or, can you query who I have access to?
+exports.accessCheck_WhoseRecordsCanIAccess = function(receiver) {
+  // returns the array of persons the receiver has view permissions for
+}
+
+exports.accessCheck_WhoCanAccessMyRecords = function(holder) {
+  // returns the array of persons who can access the holder's records.
 }
