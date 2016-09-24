@@ -37,11 +37,14 @@ You will need to set up the following parts:
 
 1. Install mongodb here: https://docs.mongodb.com/manual/installation/
 2. cd to the project root directory
-3. Run this command to create a db directory: ```mkdir -p db```
-3. Run this command to start mongodb in the background: ```mongod --dbpath db &```
-1. From project root directory, ```npm install```
-2. ```npm start```
-3. In your browser, go to ```localhost:3000```
+3. Initialize the database: ```./scripts/initdb.sh```  You might want to use a
+different tab for this.  It runs the daemon mongod in the background, which
+will annoyingly log debug info to the screen whenever a command is received.
+  * Alternatively, if you don't want to initialize the database and just want to
+  use the data you already have in your db directory, Run this command to start mongodb in the background: ```mongod --dbpath db &```
+4. From project root directory, ```npm install```
+5. ```npm start```
+6. In your browser, go to ```localhost:3000```
 
 ### Ethereum Blockchain
 To do development, you should run your own ethereum blockchain.  Keep in mind
