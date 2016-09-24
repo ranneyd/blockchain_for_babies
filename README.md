@@ -1,5 +1,5 @@
 # baby-blockchain
-Official repo of the [Blockchain for Babies](http://blockchainforbabies.com) hackathon team.
+Repo of the [Blockchain for Babies](http://blockchainforbabies.com) hackathon team.
 
 ## Overview
 Blockchain For Babies is a federated identity site for medical records.
