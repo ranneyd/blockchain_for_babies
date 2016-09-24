@@ -35,7 +35,11 @@ You will need to set up the following parts:
 
 ### BabyID website
 
-1. From this directory, ```npm install```
+1. Install mongodb here: https://docs.mongodb.com/manual/installation/
+2. cd to the project root directory
+3. Run this command to create a db directory: ```mkdir -p db```
+3. Run this command to start mongodb in the background: ```mongod --dbpath db &```
+1. From project root directory, ```npm install```
 2. ```npm start```
 3. In your browser, go to ```localhost:3000```
 
