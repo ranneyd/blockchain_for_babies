@@ -6,14 +6,16 @@ block content
         h2.hide-on-small-only.hide-on-large-only Login with your Baby ID
         h5.hide-on-med-and-up Login with your Baby ID
         form.col.s12(method="post" action="/login")
+            if error && error.length > 0
+                p.flow-text.red-text=error
             div.row
                 div.input-field.col.s12
                     i.material-icons.prefix account_box
-                    input(id="username" type="text")
+                    input(id="username" name="username" type="text")
                     label(for="username") Username
                 div.input-field.col.s12
                     i.material-icons.prefix lock
-                    input(id="password" type="password")
+                    input(id="password" name="password" type="password")
                     label(for="password") Password
                 div.input-field.col.s12
                     input.waves-effect.waves-light.btn(type="submit" value="Login")
