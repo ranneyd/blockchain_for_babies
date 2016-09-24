@@ -1,24 +1,25 @@
 {
-  "name": "blockchain_for_babies",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "npm run build-sass && node ./bin/www",
-    "build-sass": "node-sass public/stylesheets/main.sass public/stylesheets/main.css"
-  },
-  "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.13.4",
-    "pug": "latest",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0",
-    "node-sass": "latest",
-    "passport" : "~0.1.17",         
-    "passport-local" : "~0.1.6",
-    "connect-flash" : "~0.1.1",     
-    "bcrypt-nodejs" : "latest",
-    "mongoose": "~4.6.1"
-  }
+    "name": "blockchain_for_babies",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "npm run build-sass && node ./bin/www",
+        "build-sass": "node-sass public/stylesheets/main.sass public/stylesheets/main.css",
+        "initdb": "./scripts/initdb.sh"
+    },
+    "dependencies": {
+        "body-parser": "~1.15.1",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.2.0",
+        "express": "~4.13.4",
+        "pug": "latest",
+        "morgan": "~1.7.0",
+        "serve-favicon": "~2.3.0",
+        "node-sass": "latest",
+        "passport" : "~0.1.17",         
+        "passport-local" : "~0.1.6",
+        "connect-flash" : "~0.1.1",     
+        "bcrypt-nodejs" : "latest",
+        "mongoose": "~4.6.1"
+    }
 }
