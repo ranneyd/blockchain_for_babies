@@ -19,22 +19,26 @@ block content
                     i.material-icons.prefix lock_outline
                     input(id="password2" name="password2" type="password")
                     label(for="password2") Verify password
-                div.input-field.col.s12
+                div.input-field.col.s12.m6
                     i.material-icons.prefix person
                     input(id="firstname" name="firstname" type="text")
                     label(for="firstname") First name
-                div.input-field.col.s12
+                div.input-field.col.s12.m6
                     i.material-icons.prefix person_outline
                     input(id="lastname" name="lastname" type="text")
                     label(for="lastname") Last name
                 div.input-field.col.s12
                     i.material-icons.prefix cake
-                    input(id="birthdate" name="birthdate" type="text")
+                    input(id="birthdate" type="date" class="datepicker")
                     label(for="birthdate") Birthdate
                 div.input-field.col.s12
                     i.material-icons.prefix home
-                    input(id="address" name="address" type="text")
+                    textarea(id="address" class="materialize-textarea")
                     label(for="address") Address
+                div.input-field.col.s12
+                    i.material-icons.prefix email
+                    input(id="email" type="text")
+                    label(for="email") E-mail
                 div.input-field.col.s12
                     i.material-icons.prefix phone
                     input(id="phone" name="phone" type="text")
