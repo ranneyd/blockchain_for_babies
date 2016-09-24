@@ -48,4 +48,24 @@ router.get('/ping', function(req, res){
     res.status(200).send("pong!");
 });
 
+/* GET create parent page. */
+router.get('/createparent', function(req, res, next) {
+  res.render('createparent');
+});
+
+/* GET create parent page. */
+router.post('/createparent', function(req, res, next) {
+  res.render('createparent');
+});
+
+/* GET create baby page. */
+router.get('/createbaby', function(req, res, next) {
+  res.render('createbaby');
+});
+
+/* GET create parent page. */
+router.post('/createbaby', function(req, res, next) {
+  res.render('createbaby');
+});
+
 module.exports = router;
