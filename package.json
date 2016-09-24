@@ -15,7 +15,10 @@
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
     "node-sass": "latest",
-    "passport": "latest",
+    "passport" : "~0.1.17",         
+    "passport-local" : "~0.1.6",
+    "connect-flash" : "~0.1.1",     
+    "bcrypt-nodejs" : "latest",
     "mongoose": "~4.6.1"
   }
 }
