@@ -14,3 +14,15 @@ The system has the following parts:
   2. Permissioning, where the user can grant access to medical resources to other identities.
 * BabyBlock -- code that executes permission transactions on the blockchain
 * MedPortal -- a fake medical portal that allows a user to access her own (or her family members') medical records, probably for a specific doctor or practice.
+
+## User Stories
+The following user stories define doneness:
+
+1. Create Baby: A baby is born, and permissions automatically go to parent(s).
+2. When a baby reaches age 16, parent permissions automatically expire.
+3. A parent commits a crime, and loses permission for a baby.
+4. Parents get a divorce, and one parent loses permission.
+5. A baby turns 14, and opts to take her permissions away from her parents.
+6. Both parents die, and an uncle gets the baby's permissions.
+7. When a baby turns 14, she gets her own login.
+8. When a baby turns 78, she is diagnosed with Alzheimer's, and opts to give her permissions to her daughter.
