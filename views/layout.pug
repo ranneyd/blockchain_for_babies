@@ -6,16 +6,23 @@ html
         title= title
         link(rel='stylesheet', href="https://fonts.googleapis.com/icon?family=Material+Icons")
         link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+        link(rel='stylesheet', href='/stylesheets/main.css')
     body
         nav.light-blue.lighten-1(role="navigation")
             div.nav-wrapper.container
-                a.brand-logo#logo-container(href="#") babies.io
-                ul.right.hide-on-med-and-down
+                a.brand-logo#logo-container(href="/")
+                    img.logo(src="images/logo.jpg")
+                    | Blockchain for Babies
+
+                mixin links
                     li 
-                        a(href="#") Navbar link
+                        a(href="#") Login
+                    li 
+                        a(href="#") Create a Baby
+                ul.right.hide-on-med-and-down
+                    +links
                 ul.side-nav#nav-mobile
-                    li
-                        a(href="#") Navbar link
+                    +links
                 a.button-collapse(data-activates="nav-mobile" href="#")
                     i.material-icons menu
         div.section.no-pad-bot
@@ -23,3 +30,5 @@ html
                 block content
         script(type="text/javascript" src="/javascripts/jquery.min.js")
         script(type="text/javascript" src="/javascripts/materialize.min.js")
+        script(type="text/javascript" src="/javascripts/main.js")
+

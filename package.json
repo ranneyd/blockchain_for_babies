@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "npm run build-sass && node ./bin/www",
+    "build-sass": "node-sass public/stylesheets/main.sass public/stylesheets/main.css"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
