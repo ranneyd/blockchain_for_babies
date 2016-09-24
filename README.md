@@ -26,3 +26,30 @@ The following user stories define doneness:
 6. Both parents die, and an uncle gets the baby's permissions.
 7. When a baby turns 14, she gets her own login.
 8. When a baby turns 78, she is diagnosed with Alzheimer's, and opts to give her permissions to her daughter.
+
+## Setup
+You will need to set up the following parts:
+
+1. Front end BabyID website.
+2. Localhost ethereum blockchain
+
+### BabyID website
+
+1. From this directory, ```npm install```
+2. ```npm start```
+3. In your browser, go to ```localhost:3000```
+
+### Ethereum Blockchain
+To do development, you should run your own ethereum blockchain.  Keep in mind
+that none of your transactions will be visible to other developers, but they
+will be persistent on your own blockchain.
+
+#### Mac OS X
+1. Go through these instructions: https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac
+You should probably use homebrew.
+2. Configure your local ethereum environment: https://souptacular.gitbooks.io/ethereum-tutorials-and-tips-by-hudson/content/private-chain.html
+3. Link to Ethereum Wallet: https://github.com/ethereum/mist/releases
+4. Setup Instructions:
+  1. Download geth client
+  2. run geth instance following step 2; be sure to generate the custom genesis.json file
+  3. While the geth client is running, open the Mist Ethereum Wallet
