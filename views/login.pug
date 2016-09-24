@@ -2,12 +2,18 @@ extends layout
 
 block content
     div.row
-        h1 Login with your Baby ID
-        form.col.s12
+        h1.hide-on-med-and-down Login with your Baby ID
+        h2.hide-on-small-only.hide-on-large-only Login with your Baby ID
+        h5.hide-on-med-and-up Login with your Baby ID
+        form.col.s12(method="post" action="/login")
             div.row
                 div.input-field.col.s12
+                    i.material-icons.prefix account_box
                     input(id="username" type="text")
                     label(for="username") Username
                 div.input-field.col.s12
+                    i.material-icons.prefix vpn_key
                     input(id="password" type="text")
                     label(for="password") Password
+                div.input-field.col.s12
+                    input.waves-effect.waves-light.btn(type="submit" value="Login")
