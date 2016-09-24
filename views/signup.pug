@@ -3,27 +3,29 @@ extends layout
 block content
     div.row
         h1 Create your Baby ID login
-        form.col.s12
+        form.col.s12(method="post" action="/signup")
+            if error && error.length > 0
+                p.flow-text.red-text=error
             div.row
                 div.input-field.col.s12
                     i.material-icons.prefix account_box
-                    input(id="username" type="text")
+                    input(id="username" name="username" type="text")
                     label(for="username") Username
                 div.input-field.col.s12
                     i.material-icons.prefix lock
-                    input(id="password" type="password")
+                    input(id="password" name="password" type="password")
                     label(for="password") Password
                 div.input-field.col.s12
                     i.material-icons.prefix lock_outline
-                    input(id="verify_password" type="password")
-                    label(for="verify_password") Verify password
+                    input(id="password2" name="password2" type="password")
+                    label(for="password2") Verify password
                 div.input-field.col.s12.m6
                     i.material-icons.prefix person
-                    input(id="fisrtname" type="text")
+                    input(id="firstname" name="firstname" type="text")
                     label(for="firstname") First name
                 div.input-field.col.s12.m6
                     i.material-icons.prefix person_outline
-                    input(id="lastname" type="text")
+                    input(id="lastname" name="lastname" type="text")
                     label(for="lastname") Last name
                 div.input-field.col.s12
                     i.material-icons.prefix cake
@@ -34,8 +36,12 @@ block content
                     textarea(id="address" class="materialize-textarea")
                     label(for="address") Address
                 div.input-field.col.s12
+                    i.material-icons.prefix email
+                    input(id="email" type="text")
+                    label(for="email") E-mail
+                div.input-field.col.s12
                     i.material-icons.prefix phone
-                    input(id="phone" type="text")
+                    input(id="phone" name="phone" type="text")
                     label(for="phone") Phone number
                 div.input-field.col.s12
                     input.waves-effect.waves-light.btn(type="submit" value="Sign up")
