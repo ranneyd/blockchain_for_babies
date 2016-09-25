@@ -16,8 +16,13 @@ html
                         | BlockBabies
 
                     mixin links
-                        li
-                            a(href="/login") Login
+                        if (null == user)
+                            li
+                                a(href="/login") Login
+                        else
+                            li.orange-text #{user.username}
+                            li
+                                a(href="/logout") Logout
                     ul.right.hide-on-med-and-down
                         +links
                     ul.side-nav#nav-mobile
