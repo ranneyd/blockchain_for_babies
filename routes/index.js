@@ -62,10 +62,7 @@ router.post('/createparent', function(req, res) {
         if (err) {
             return res.render('createparent', { error : err.message });
         }
-
-        passport.authenticate('local')(req, res, function () {
-            res.redirect('/home');
-        });
+        res.redirect('/home');
     });
 });
 
@@ -73,9 +70,17 @@ router.get('/createbaby', function(req, res, next) {
   res.render('createbaby');
 });
 
-router.post('/createbaby', function(req, res, next) {
-  res.render('createbaby');
+router.post('/createbaby', function(req, res) {
+    console.log(req.body);
+    User.register(new User({ username : req.body.username }), "1", function(err, user) {
+        if (err) {
+            return res.render('createbaby', { error : err.message });
+        }
+        res.redirect('/home');
+    });
 });
+
+
 
 router.get('/configure', function(req, res, next) {
   res.render('configure');
