@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
     res.render('landing', { title : "Blockchain for Babies" });
 });
 router.get('/home', function (req, res) {
-    res.render('home', { title : "Blockchain for Babies" });
+    res.render('home', { title : "Blockchain for Babies", user: req.user });
 });
 
 router.get('/signup', function(req, res) {
@@ -35,9 +35,10 @@ router.get('/login', function(req, res) {
     res.render('login', { user : req.user });
 });
 
-router.post('/login', passport.authenticate('local'), function(req, res) {
-    res.redirect('/home');
-});
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/home',
+    failureRedirect: '/login',
+}));
 
 router.get('/logout', function(req, res) {
     req.logout();
