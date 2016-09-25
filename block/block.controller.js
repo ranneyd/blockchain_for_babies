@@ -1,4 +1,11 @@
-var model = require('./block.model.js');
+var model = require('./block.model.js'),
+  keypair = require('keypair');
+
+exports.createUser = function() {
+  var pair = keypair();
+  return pair;  // The pair should be added to the User before
+    // adding to the database.
+};
 
 exports.createBaby = function(username, contactInfo) {
   // Creates a public and private key
@@ -12,7 +19,7 @@ exports.createBabyParent = function(username, password, contactInfo) {
   // The created "Baby" is a actually a mature adult, capable
   // of holding a username and password.
   // Adds the contactInfo to the Baby that is returned, also
-}
+};
 
 exports.addPermission = function(holder, receiver) {
   // from is a full Baby structure, which contains private key
@@ -23,7 +30,7 @@ exports.addPermission = function(holder, receiver) {
 exports.revokePermission = function(holder, receiver) {
   // ??? Is the owner of permission always the revoker?
   // or can a government admin revoke permission?
-}
+};
 
 exports.timeRevoke = function(time, holder, receiver, type) {
   // time -- the time in days from today when the permission is revoked
@@ -31,7 +38,7 @@ exports.timeRevoke = function(time, holder, receiver, type) {
   // receiver -- the person who is granted the permission for a limited time
   // type -- the permission type that will be granted and then revoked.
   // returns a transactionid?
-}
+};
 
 exports.timePermission = function(time, holder, receiver, type) {
   // time -- time in days from today
@@ -39,12 +46,12 @@ exports.timePermission = function(time, holder, receiver, type) {
   // receiver -- the person who is granted the permission for a limited time
   // type -- the permission type that will be granted and then revoked.
   // returns a transactionid?
-}
+};
 
 exports.accessCheck_WhoseRecordsCanIAccess = function(receiver) {
   // returns the array of persons the receiver has view permissions for
-}
+};
 
 exports.accessCheck_WhoCanAccessMyRecords = function(holder) {
   // returns the array of persons who can access the holder's records.
-}
+};
