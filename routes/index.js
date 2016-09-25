@@ -7,7 +7,16 @@ var router = express.Router();
 router.get('/', function (req, res) {
     res.render('landing', { title : "Blockchain for Babies" });
 });
+
 router.get('/home', function (req, res) {
+   if (req.user && req.user.username=="admin") {
+     res.redirect('/adminhome');
+     return;
+   }
+   res.render('home', { title : "Blockchain for Babies", user: req.user });
+});
+
+router.get('/adminhome', function (req, res) {
     res.render('home', { title : "Blockchain for Babies", user: req.user });
 });
 
@@ -62,7 +71,7 @@ router.post('/createparent', function(req, res) {
         if (err) {
             return res.render('createparent', { error : err.message });
         }
-        res.redirect('/home');
+        res.redirect('/adminhome');
     });
 });
 
@@ -76,7 +85,7 @@ router.post('/createbaby', function(req, res) {
         if (err) {
             return res.render('createbaby', { error : err.message });
         }
-        res.redirect('/home');
+        res.redirect('/adminhome');
     });
 });
 
