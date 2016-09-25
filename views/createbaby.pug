@@ -3,19 +3,21 @@ extends layout
 block content
     div.row
         h1 Create baby ID
-        form.col.s12
+        form.col.s12(method="post" action="/createbaby")
+            if error && error.length > 0
+                p.flow-text.red-text=error
             div.row
                 div.input-field.col.s12
                     i.material-icons.prefix account_box
-                    input(id="username" type="text")
+                    input(id="username" name="username" type="text")
                     label(for="username") Username
                 div.input-field.col.s12.m6
                     i.material-icons.prefix person
-                    input(id="fisrtname" type="text")
+                    input(id="fisrtname" name="firstname" type="text")
                     label(for="firstname") First name
                 div.input-field.col.s12.m6
                     i.material-icons.prefix person_outline
-                    input(id="lastname" type="text")
+                    input(id="lastname" name="lastname" type="text")
                     label(for="lastname") Last name
                 div.input-field.col.s12
                     i.material-icons.prefix cake
