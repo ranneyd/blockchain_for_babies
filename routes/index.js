@@ -17,7 +17,7 @@ router.get('/home', function (req, res) {
 });
 
 router.get('/adminhome', function (req, res) {
-    res.render('home', { title : "Blockchain for Babies", user: req.user });
+    res.render('adminhome', { title : "Blockchain for Babies", user: req.user });
 });
 
 router.get('/signup', function(req, res) {
