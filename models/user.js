@@ -9,7 +9,9 @@ var User = new Schema({
     lastname: String,
     birthdate: String,
     address: String,
-    phonenumber: String
+    phonenumber: String,
+    public: String,
+    private: String
 });
 
 User.plugin(passportLocalMongoose, {

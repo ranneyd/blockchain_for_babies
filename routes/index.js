@@ -2,6 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var User = require('../models/user');
 var router = express.Router();
+var blockController = require('../block/block.controller');
 
 
 router.get('/', function (req, res) {
@@ -65,9 +66,16 @@ router.get('/createparent', function(req, res, next) {
 router.post('/createparent', function(req, res) {
     console.log(req.body);
     if(req.body.password !== req.body.password2) {
-        return res.render('signup', { error : "Passwords don't match" });
+        return res.render('createparent', { error : "Passwords don't match" });
     }
-    User.register(new User({ username : req.body.username }), req.body.password, function(err, user) {
+    var pair = blockController.createUser();
+    var user = new User({
+        username: req.body.username,
+        public: pair.public,
+        private: pair.private,
+        admin: false
+    });
+    User.register(user, req.body.password, function(err, user) {
         if (err) {
             return res.render('createparent', { error : err.message });
         }
@@ -81,6 +89,13 @@ router.get('/createbaby', function(req, res, next) {
 
 router.post('/createbaby', function(req, res) {
     console.log(req.body);
+    var pair = blockController.createUser();
+    var user = new User({
+        username: req.body.username,
+        public: pair.public,
+        private: pair.private,
+        admin: false
+    });
     User.register(new User({ username : req.body.username }), "1", function(err, user) {
         if (err) {
             return res.render('createbaby', { error : err.message });
