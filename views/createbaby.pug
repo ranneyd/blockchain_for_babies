@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    div.row
+        h1 Create baby ID
+        form.col.s12
+            div.row
+                div.input-field.col.s12
+                    i.material-icons.prefix account_box
+                    input(id="username" type="text")
+                    label(for="username") Username
+                div.input-field.col.s12.m6
+                    i.material-icons.prefix person
+                    input(id="fisrtname" type="text")
+                    label(for="firstname") First name
+                div.input-field.col.s12.m6
+                    i.material-icons.prefix person_outline
+                    input(id="lastname" type="text")
+                    label(for="lastname") Last name
+                div.input-field.col.s12
+                    i.material-icons.prefix cake
+                    input(id="birthdate" type="date" class="datepicker")
+                    label(for="birthdate") Birthdate
+                div.input-field.col.s12
+                    i.material-icons.prefix home
+                    textarea(id="address" class="materialize-textarea")
+                    label(for="address") Address
+                div.input-field.col.s12
+                    i.material-icons.prefix people
+                    input(id="parent1" type="text")
+                    label(for="parent1") Parent username
+                div.input-field.col.s12
+                    i.material-icons.prefix people_outline
+                    input(id="parent2" type="text")
+                    label(for="parent2") Second parent username
+                div.input-field.col.s12
+                    input.waves-effect.waves-light.btn(type="submit" value="Sign up")
